@@ -55,8 +55,18 @@ body {
   justify-content: space-between;
 }
 
+.shoppingList__item > span {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .deleteItemBtn {
   cursor: pointer;
+}
+
+.deleteItemBtn:hover {
+  color: red;
 }
 
 .main__input {
