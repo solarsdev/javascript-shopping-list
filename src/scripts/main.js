@@ -1,3 +1,5 @@
+'use strict';
+
 const shoppingList = document.querySelector('.shoppingList');
 const shoppingItemInput = document.getElementById('shoppingItem');
 const addItemBtn = document.querySelector('.addItemBtn');
@@ -18,9 +20,9 @@ const addShoppingItemToList = () => {
     deleteItemBtnElement.setAttribute('class', 'deleteItemBtn');
     newItemList.appendChild(deleteItemBtnElement);
 
-    deleteItemBtnElement.addEventListener('click', () => {
-      shoppingList.removeChild(newItemList);
-    });
+    // deleteItemBtnElement.addEventListener('click', () => {
+    //   shoppingList.removeChild(newItemList);
+    // });
 
     const deleteItemIcon = document.createElement('i');
     deleteItemIcon.setAttribute('class', 'fas fa-trash-alt');
@@ -33,8 +35,17 @@ const addShoppingItemToList = () => {
   }
 };
 
-shoppingItemInput.addEventListener('keypress', (e) => {
-  if (e.key === 'Enter') {
+shoppingList.addEventListener('click', (event) => {
+  if (event.target.tagName !== 'I') {
+    return;
+  }
+
+  const parentList = event.target.closest('li');
+  shoppingList.removeChild(parentList);
+});
+
+shoppingItemInput.addEventListener('keypress', (event) => {
+  if (event.key === 'Enter') {
     addShoppingItemToList();
   }
 });
