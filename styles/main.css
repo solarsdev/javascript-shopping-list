@@ -1,0 +1,105 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell,
+    'Open Sans', 'Helvetica Neue', sans-serif;
+  background-color: #cfd3df;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.appContainer {
+  width: 350px;
+  height: 560px;
+  border-radius: 20px;
+}
+
+.header {
+  height: 40px;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 20px;
+  background: linear-gradient(0.85turn, #97bded, #e3c0d6);
+}
+
+.main {
+  background-color: #f2f0f7;
+  display: grid;
+  grid-template-rows: 530px 30px;
+}
+
+.shoppingList {
+  padding: 10px 30px;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-auto-rows: 30px;
+  overflow: auto;
+}
+
+.shoppingList__item {
+  display: flex;
+  justify-content: space-between;
+}
+
+.shoppingList__item > span {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.deleteItemBtn {
+  cursor: pointer;
+}
+
+.deleteItemBtn:hover {
+  color: red;
+}
+
+.main__input {
+  height: 30px;
+}
+
+.footer {
+  height: 40px;
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  background: linear-gradient(0.85turn, #97bded, #e3c0d6);
+}
+
+.addItemBtn {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  font-size: 35px;
+  background: black;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+input[type='text'] {
+  width: 100%;
+  border: none;
+  outline: none;
+  font-size: 14px;
+  height: 30px;
+  text-indent: 16px;
+}
