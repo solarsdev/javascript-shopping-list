@@ -5,7 +5,7 @@
   "main": "script.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "predeploy": "cp src dist",
+    "predeploy": "cp -R src dist",
     "deploy": "gh-pages -d dist"
   },
   "repository": {
